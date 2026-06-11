@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Portfolio — Home</title>
+<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="page-fade">
+<div class="cursor-glow"></div>
+<div class="leaves" aria-hidden="true"></div>
+<link rel="stylesheet" href="leaves.css">
+<div class="leaves" aria-hidden="true"></div>
+
+
+<!-- PERSISTENT MUSIC (on every page) -->
+<audio id="bgMusic" src="C:\Users\Asus\OneDrive - Universiti Teknologi MARA (1)\Documents\IMD318\Powfu - death bed (coffee for your head) (Lyrics) ft. beabadoobee [4N-WFXpBjpc].mp3" loop></audio>
+<button id="musicToggle" class="music-toggle" title="My Fav Song">🎵 <span>MY FAV SONG</span></button>
+
+<!-- NAV -->
+<header class="nav">
+  <a href="index.html" class="logo">My<span>Portfolio</span></a>
+  <nav class="links">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="education.html">Education</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="hobbies.html">Hobbies</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <button class="burger" aria-label="menu"><span></span><span></span><span></span></button>
+</header>
+
+<!-- BANNER -->
+<section class="banner reveal">
+  <div class="banner-overlay"></div>
+  <div class="banner-inner">
+    <p class="kicker">— Welcome to my world</p>
+    <h2 class="serif banner-title">Who Am I?</h2>
+    <p class="banner-sub"> FUTURE · GRATEFULL · BELIEVE · CONFIDENT · SUCCESS</p>
+    <a href="about.html" class="banner-btn">Discover More →</a>
+  </div>
+</section>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-shape"></div>
+  <div class="hero-grid">
+    <div class="hero-img reveal">
+      <div class="arch">
+        <img src="home.jpeg" alt="Profile" />
+      </div>
+      <div class="dot dot-1"></div>
+      <div class="dot dot-2"></div>
+    </div>
+    <div class="hero-text reveal">
+      <p class="kicker">@h4fz___</p>
+      <h1>HAFIZ<br/>ZULKIFLI</h1>
+      <div class="badge">PERSONAL PORTFOLIO</div>
+      <div class="socials">
+       
+      </div>
+    </div>
+  </div>
+  <h2 class="watermark" data-parallax="0.3">PORTFOLIO</h2>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section class="highlights">
+  <div class="card reveal"><h3>About Me</h3><p>Get to know who I am and what drives me.</p><a href="about.html">Read more →</a></div>
+  <div class="card reveal"><h3>Education</h3><p>My academic journey and achievements.</p><a href="education.html">Explore →</a></div>
+  <div class="card reveal"><h3>Gallery</h3><p>Moments captured through my lens.</p><a href="gallery.html">View →</a></div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Hafiz Zulkifli profile. crafted with creativity</p>
+  <p class="last-update">Last update: <span id="lastUpdate"></span></p>
+</footer>
+<script src="script.js"></script>
+<script src="leaves.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+/* === FALLING LEAVES ANIMATION === */
+.leaves {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.falling-leaf {
+  position: absolute;
+  top: -10vh;
+  left: var(--left, 50vw);
+  width: var(--size, 32px);
+  height: var(--size, 32px);
+  opacity: var(--opacity, 0.6);
+  transform: rotate(var(--rot, 0deg));
+  animation:
+    leafFall var(--dur, 16s) linear infinite,
+    leafSway calc(var(--dur, 16s) / 4) ease-in-out infinite alternate;
+  animation-delay: var(--delay, 0s);
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
+  will-change: transform;
+}
+
+.falling-leaf svg { width: 100%; height: 100%; display: block; }
+
+@keyframes leafFall {
+  0%   { transform: translate3d(0, -10vh, 0) rotate(var(--rot, 0deg)); }
+  100% { transform: translate3d(0, 110vh, 0) rotate(calc(var(--rot, 0deg) + 540deg)); }
+}
+
+@keyframes leafSway {
+  0%   { margin-left: 0; }
+  100% { margin-left: var(--sway, 60px); }
+}
+
+/* Daun penjuru (statik + tiupan angin) */
+.corner-leaves { position: fixed; inset: 0; pointer-events: none; z-index: 2; }
+.leaf-deco {
+  position: absolute;
+  width: 220px;
+  opacity: 0.85;
+}
+.leaf-tl {
+  top: -30px; left: -40px;
+  transform-origin: top left;
+  animation: leafBreezeL 6s ease-in-out infinite alternate;
+}
+.leaf-br {
+  bottom: -30px; right: -40px;
+  transform: rotate(180deg);
+  transform-origin: bottom right;
+  animation: leafBreezeR 6s ease-in-out infinite alternate;
+}
+@keyframes leafBreezeL {
+  0%   { transform: rotate(0deg) translateY(0); }
+  100% { transform: rotate(4deg) translateY(6px); }
+}
+@keyframes leafBreezeR {
+  0%   { transform: rotate(180deg) translateY(0); }
+  100% { transform: rotate(184deg) translateY(6px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .falling-leaf, .leaf-deco { animation: none !important; }
+}
